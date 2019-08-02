@@ -1,0 +1,49 @@
+body {
+  font-family: "San Francisco", "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  margin: auto;
+  max-width: 1200px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  vertical-align: top;
+  width: 50%;
+  border: 1px solid gray;
+}
+
+#otherErrorsDiv {
+  color: red;
+}
+
+pre {
+  overflow: scroll;
+  padding-bottom: 30px;
+}
+
+a {
+  cursor: pointer;
+}
+
+#execResultsTextArea {
+  border: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.LintError,
+.LintErrorWithSuggestion,
+.LintCellTypeHints {
+  white-space: pre;
+  color: red;
+  background: #e5e5e5;
+}
+.LintCellTypeHints {
+  color: black;
+}
+.LintErrorWithSuggestion {
+  cursor: pointer;
+}

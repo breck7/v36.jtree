@@ -1,0 +1,17 @@
+coverage/
+.nyc_output/
+ignore/
+node_modules/
+*.sublime-workspace
+*.aux
+*.log
+*.synctex.gz
+debugger.js
+jtree.project
+notes.txt
+jtree.browser.ts
+syntax.sh
+src/*/*.js
+src/*.js
+*.map
+*.d.ts

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="/sandbox/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/built/jtree.browser.js"></script>
+    <script type="text/javascript" src="sandbox.browser.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="sandbox.css" />
+    <title>Tree Language Sandbox</title>
+  </head>
+  <body>
+    <h1>Tree Notation Sandbox</h1>
+    <p>
+      <a href="/sandbox/build/">Build a Tree Language</a> | <a href="test.html">JTree Tests</a> | <a href="perf.html">Perf Tests</a> |
+      <a href="typePerf.html">Type Perf Tests</a> | <a href="https://github.com/breck7/jtree">GitHub</a> |
+      <a href="http://treenotation.org">TreeNotation.org</a> |
+      <span id="version"></span>
+    </p>
+    <p>
+      This is a simple console for exploring Tree Notation. In dev tools, you can access the parsed tree below as "window.tree"
+    </p>
+    <table>
+      <tr>
+        <td>
+          Tree <br />
+          <textarea id="treeConsole"></textarea>
+        </td>
+        <td>
+          toJsonSubset() <a href="#" id="jsonSample">sample</a><br />
+          <textarea id="jsonConsole"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toCsv() <a href="#" id="csvSample">sample</a><br />
+          <textarea id="csvConsole"></textarea>
+        </td>
+        <td>
+          toXml() <br />
+          <textarea id="xmlConsole"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toOutline()<br />
+          <pre id="outlineConsole"></pre>
+        </td>
+        <td>
+          toHtml()<br />
+          <pre id="htmlConsole"></pre>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toTable()<br />
+          <pre id="tableConsole"></pre>
+        </td>
+        <td>
+          toYaml()<br />
+          <pre id="yamlConsole"></pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

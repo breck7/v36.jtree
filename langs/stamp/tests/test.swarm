@@ -1,0 +1,20 @@
+#! /usr/bin/env node /usr/local/bin/jtree
+test basics stamp
+ arrangeTestSubject
+  require ../stamp.js
+  constructWithBlockString
+   folder testEx
+   file testEx/hi.sh
+    data
+     echo Hello world
+    executable
+ getAllErrors
+  lengthIs 0
+skipTest staticReenableOncePathFix
+ arrangeTestSubject
+  require ../stamp.js
+  static
+ dirToStamp ./cases
+  blockStringIs
+   file cases/executable.stamp
+   file cases/test.stamp

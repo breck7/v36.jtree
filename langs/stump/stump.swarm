@@ -1,0 +1,69 @@
+#! /usr/bin/env node /usr/local/bin/jtree
+test basics
+ arrangeTestSubject
+  require ./stump.js
+  constructWithBlockString
+   html
+    id bam
+    class someClass
+    body
+     div
+      type foo
+      bern
+       Hello world
+       This is some text
+     span Hello more
+ getAllErrors
+  lengthIs 0
+ toHtml
+  blockStringIs
+   <html id="bam" class="someClass">
+    <body>
+     <div type="foo">Hello world
+   This is some text</div>
+     <span>Hello more</span>
+   </body>
+   </html>
+   
+test div
+ arrangeTestSubject
+  require ./stump.js
+  constructWithBlockString
+   div hello world
+    id bam
+    class someClass
+ toHtml
+  blockStringIs
+   <div id="bam" class="someClass">hello world</div>
+   
+test uids
+ arrangeTestSubject
+  require ./stump.js
+  constructWithBlockString
+   div hello world
+    id bam
+    class someClass
+ getFirstNode
+  toHtmlWithSuids
+   typeIs string
+   stringIncludes stumpUid
+  isStumpNodeCheckbox
+   stringIs false
+  toHtml
+   typeIs string
+  isInputType
+   stringIs false
+  getStumpNodeAttr id
+   stringIs bam
+test syntax
+ arrangeTestSubject
+  require ./stump.js
+  constructWithBlockString
+   div
+    bern
+     Hello world
+ getInPlaceCellTypeTree
+  blockStringIs
+   htmlTagNameCell
+    contentHolderNameCell
+     anyHtmlContentCell anyHtmlContentCell

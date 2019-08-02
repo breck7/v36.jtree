@@ -1,0 +1,17 @@
+#! /usr/bin/env node /usr/local/bin/jtree
+test basics jibberish
+ arrangeTestSubject
+  require ./jibberish.js
+  constructWithBlockString
+   foo
+   nodeWithConsts
+   nested
+   lightbulbState on
+   lightbulbState off
+   + 2 3 2
+   saturation 2
+   someCode
+    echo hello world
+   xColumnName gender
+ getAllErrors
+  lengthIs 0

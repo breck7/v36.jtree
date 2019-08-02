@@ -1,0 +1,29 @@
+#! /usr/bin/env node /usr/local/bin/jtree
+test compileHakon
+ arrangeTestSubject
+  require ./hakon.js
+  todo Have a way to get the first root example instead of duplicating it here.
+  constructWithBlockString
+   body
+    font-size 12px
+    h1,h2
+     color red
+   a
+    &:hover
+     color blue
+     font-size 17px
+ getAllErrors
+  lengthIs 0
+ compile
+  blockStringIs
+   body {
+     font-size: 12px;
+   }
+   body h1,body h2 {
+     color: red;
+   }
+   a:hover {
+     color: blue;
+     font-size: 17px;
+   }
+   
